@@ -31,6 +31,7 @@ variable "internal_networks" {
   description = "Internal network CIDR blocks."
 }
 
+# grab product code from this page: https://wiki.centos.org/Cloud/AWS
 data "aws_ami" "centos" {
   most_recent = true
 
