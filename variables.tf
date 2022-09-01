@@ -36,7 +36,7 @@ data "aws_ami" "centos" {
 
   filter {
     name   = "product-code"
-    values = ["aw0evgkw8e5c1q413zgy5pjce"]
+    values = ["47k9ia2igxpcce2bzo8u3kj03"]
   }
 
   owners = ["aws-marketplace"]
