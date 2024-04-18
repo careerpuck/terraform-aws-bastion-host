@@ -31,13 +31,13 @@ variable "internal_networks" {
   description = "Internal network CIDR blocks."
 }
 
-# grab product code from this page: https://wiki.centos.org/Cloud/AWS
+# grab product code by subscribing in the AWS Marketplace
 data "aws_ami" "centos" {
   most_recent = true
 
   filter {
     name   = "product-code"
-    values = ["cvugziknvmxgqna9noibqnnsy"]
+    values = ["9svc856m58q4n42iz9he7imlb"]
   }
 
   owners = ["aws-marketplace"]
