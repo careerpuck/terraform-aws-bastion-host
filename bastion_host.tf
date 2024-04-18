@@ -11,10 +11,6 @@ resource "aws_instance" "server" {
     delete_on_termination = true
   }
 
-  lifecycle {
-    ignore_changes = [ami]
-  }
-
   tags = {
     Name    = "Bastion host"
     Project = local.project
