@@ -13,6 +13,7 @@ resource "aws_security_group" "bastion" {
 }
 
 resource "aws_security_group_rule" "ssh" {
+  count             = length(var.allowed_hosts) > 0 ? 1 : 0
   protocol          = "TCP"
   from_port         = 22
   to_port           = 22
