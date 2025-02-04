@@ -34,6 +34,7 @@ variable "internal_networks" {
 # grab product code by subscribing in the AWS Marketplace
 data "aws_ami" "centos" {
   most_recent = true
+  include_deprecated = true
 
   filter {
     name   = "product-code"
