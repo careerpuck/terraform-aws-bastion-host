@@ -8,7 +8,7 @@ resource "aws_instance" "server" {
 
   root_block_device {
     volume_size           = local.disk_size
-    delete_on_termination = true
+    delete_on_termination = false
   }
 
   tags = {
