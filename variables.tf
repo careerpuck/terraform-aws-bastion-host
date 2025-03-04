@@ -37,8 +37,8 @@ data "aws_ami" "centos" {
   include_deprecated = true
 
   filter {
-    name   = "product-code"
-    values = ["a5unn61qlzqjym3huxbkpmptr"]
+    name   = "source-image-id"
+    values = ["ami-0c43d0f6a13bea52b"]
   }
 
   owners = ["aws-marketplace"]
