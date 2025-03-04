@@ -34,14 +34,13 @@ variable "internal_networks" {
 # grab product code by subscribing in the AWS Marketplace
 data "aws_ami" "centos" {
   most_recent = true
-  include_deprecated = true
 
   filter {
     name   = "source-image-id"
     values = ["ami-0c43d0f6a13bea52b"]
   }
 
-  owners = ["aws-marketplace"]
+  owners = null
 }
 
 data "aws_subnet" "public" {
