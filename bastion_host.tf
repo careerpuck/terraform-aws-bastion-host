@@ -1,4 +1,4 @@
-rresource "aws_instance" "server" {
+resource "aws_instance" "server" {
   ami                         = local.ami_id
   instance_type               = local.instance_type
   key_name                    = local.ssh_key
