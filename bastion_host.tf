@@ -1,4 +1,4 @@
-resource "aws_instance" "server" {
+rresource "aws_instance" "server" {
   ami                         = local.ami_id
   instance_type               = local.instance_type
   key_name                    = local.ssh_key
@@ -8,12 +8,12 @@ resource "aws_instance" "server" {
 
   root_block_device {
     volume_size           = local.disk_size
+    volume_type           = "gp3"
+    encrypted             = true
     delete_on_termination = false
   }
 
   tags = {
-    Name    = "Bastion host"
-    Project = local.project
+    Name = join("-", [local.project, "bastion"])
   }
 }
-
